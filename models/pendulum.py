@@ -40,4 +40,10 @@ def calculate_energy(state, params):
 
     kinetic_energy = 0.5 * mass * (length * angular_velocity) ** 2
     potential_energy = mass * gravity * length * np.cos(angle)
-    return kinetic_energy, potential_energy
+    return potential_energy, kinetic_energy
+
+def calculate_energy_error(calculate_energy, state, params):
+    potential_energy, kinetic_energy = calculate_energy(state, params)
+    total_energy = potential_energy + kinetic_energy
+    relative_error = np.max(np.abs(total_energy - total_energy[0])) / total_energy[0]
+    return relative_error
