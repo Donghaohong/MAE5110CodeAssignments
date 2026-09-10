@@ -58,10 +58,10 @@ I first varied the slope over $0^\circ,2^\circ,4^\circ,5^\circ,8^\circ,12^\circ$
 
 For each existing rolling cycle, I found its return-map fixed point and perturbed the post-impact angular velocity on both sides, keeping the post-impact angle fixed. The Floquet multiplier was estimated using
 
-$$
-\lambda\approx\frac{P(\omega^*+\varepsilon)-P(\omega^*-\varepsilon)}{2\varepsilon},
-\qquad \varepsilon=10^{-4}\ \mathrm{rad/s}.
-$$
+```math
+\lambda \approx \frac{P(\omega^{\ast}+\varepsilon)-P(\omega^{\ast}-\varepsilon)}{2\varepsilon},
+\qquad \varepsilon=10^{-4}\,\mathrm{rad/s}.
+```
 
 Locally, a small speed error satisfies $\delta\omega_{k+1}\approx\lambda\,\delta\omega_k$. Thus, $|\lambda|<1$ indicates local stability, and a smaller magnitude means faster error decay per step. N/A indicates that no sustainable rolling cycle exists for that parameter set; it does not mean that the multiplier is zero.
 
