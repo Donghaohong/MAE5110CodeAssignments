@@ -6,6 +6,7 @@ def dynamics(t, state, params):
     length = params["length"]
     mass = params["mass"]
     damping_coeff = params["damping_coeff"]
+    torque = params["torque"]
 
     angle = state[0]
     angular_velocity = state[1]
