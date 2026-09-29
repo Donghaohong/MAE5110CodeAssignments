@@ -25,4 +25,5 @@ notebooks = [
 
 [tool.setuptools]
 packages = ["models", "algorithms"]
+py-modules = ["integrators"]
 package-dir = {"" = "."}

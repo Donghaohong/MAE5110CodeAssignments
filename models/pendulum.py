@@ -13,7 +13,8 @@ def dynamics(t, state, params):
 
     angular_acceleration = (
         -1 * mass * gravity * length * np.sin(angle)
-        - damping_coeff * angular_velocity  # <-- DAMPING TERM
+        - damping_coeff * angular_velocity
+        + torque
     ) / (mass * length**2)
 
     state_derivative = np.array([angular_velocity, angular_acceleration])
@@ -26,6 +27,7 @@ def generate_params():
         "length": 1,  # rod length (m)
         "mass": .2,  # point mass at end of rod (kg)
         "damping_coeff": 0.0,  # damping coefficient (kg*m^2/s)
+        "torque": 0.0,  # applied torque (N m)
     }
     return params
 

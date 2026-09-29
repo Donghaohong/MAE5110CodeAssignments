@@ -1,5 +1,16 @@
 import numpy as np
 
+
+def generate_params():
+    """Return the physical parameters used in the Assignment 1 example."""
+    return {"gravity": 9.81, "length": 0.5, "mass": 0.2}
+
+
+def generate_initial_condition():
+    """Start the example at mid-stance with forward angular velocity."""
+    return np.array([0.0, 3.0])
+
+
 def dynamics(t, state, params):
     gravity = params["gravity"]
     length = params["length"]
@@ -14,4 +25,3 @@ def dynamics(t, state, params):
 
     state_derivative = np.array([angular_velocity, angular_acceleration])
     return state_derivative
-
