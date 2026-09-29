@@ -20,6 +20,7 @@ uv run python assignment_0.py
 
 - [Assignment 0](assignments/assignment_0.md)
 - [Assignment 1](assignments/assignment_1.md)
+- [Assignment 2](assignments/assignment_2.md)
 
 ## HW1: Rimless Wheel
 
@@ -73,3 +74,4 @@ The scripts save results beside the code in `HW1/`:
 - **Parameter sweeps:** `rimless_wheel_slope_sweep_roa.png`, `rimless_wheel_spokes_sweep_roa.png`, `rimless_wheel_sweep_summary.png`, and `rimless_wheel_parameter_sweep_results.npz`.
 
 See [the HW1 report](HW1/assignment_1_report.md) for the sanity checks, figures, and discussion.
+
