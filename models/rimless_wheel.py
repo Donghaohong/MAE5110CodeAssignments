@@ -7,6 +7,22 @@ The autonomous model retains t for compatibility with the integration interface.
 
 import numpy as np
 
+def generate_params():
+    """Return parameters for the rimless wheel"""
+    return {
+        "gravity": 9.81,
+        "length": 1.0,
+        "mass": 0.2,
+        "slope_angle": np.deg2rad(5.0),
+        "num_spokes": 8
+    }
+
+def generate_initial_condition():
+    """return the initial state"""
+    params = generate_params()
+    alpha = np.pi / params["num_spokes"]
+    return np.array([params["slope_angle"] - alpha, 0.0])
+
 def dynamics(t, state, params):
     """Return the single-stance state derivative [omega, domega/dt].
 
